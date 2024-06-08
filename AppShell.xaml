@@ -12,6 +12,10 @@
         Title="Create New Habit"
         ContentTemplate="{DataTemplate views:NewHabitView}"
         Route="NewHabitView" />
+    <!--<ShellContent
+    Title="Create New Habit"
+    ContentTemplate="{DataTemplate local:MainPage}"
+    Route="NewHabitView" />-->
 
     <!--<TabBar x:Name="ShellTabBar">
         <Tab Title="Home">

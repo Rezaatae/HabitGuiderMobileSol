@@ -29,18 +29,20 @@
                        Margin="0"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="1"
-                                     Grid.Column="1">
+                                     Grid.Column="1"
+                                     Spacing="5">
                     <Label Text="Colour"
                            HorizontalOptions="Center"/>
                     <Button HorizontalOptions="Center"
-                            VerticalOptions="End"
-                            CornerRadius="15"
+                            VerticalOptions="Center"
+                            CornerRadius="0"
+                            HeightRequest="30"
                             Padding="0, 0"
-                            Background="#Ff9788">
+                            Clicked="OnColorPickerClicke">
                     </Button>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="2"
-                                 Grid.ColumnSpan="2">
+                                     Grid.ColumnSpan="2">
                     <Label Text="Description"/>
                     <Entry Placeholder="Habit Description"
                        Margin="0"/>
@@ -59,7 +61,7 @@
                 <VerticalStackLayout Grid.Row="4"
                                  Grid.Column="1">
                     <Label Text="Frequency"/>
-                    <Picker Title="Freuency">
+                    <Picker Title="Frequency">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Daily</x:String>

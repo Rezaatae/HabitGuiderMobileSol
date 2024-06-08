@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<mopups:PopupPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mopups="clr-namespace:Mopups.Pages;assembly=Mopups"
+             x:Class="HabitGuiderMobileSol.Popups.ColorPickerPopup"
+             Title="ColorPickerPopup"
+                  BackgroundColor="#80000000" CloseWhenBackgroundIsClicked="True">
+    <VerticalStackLayout WidthRequest="250" HeightRequest="300" VerticalOptions="CenterAndExpand" BackgroundColor="Black">
+        <Label 
+            Text="Change Color"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Margin="5"/>
+        <Grid RowDefinitions="*, *, *, *, *"
+              ColumnDefinitions="*, *, *, *"
+              Padding="10"
+              RowSpacing="5">
+            <HorizontalStackLayout Grid.Row="0"
+                                   Grid.ColumnSpan="4"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                <Button Grid.Column="0"
+                    Margin="3"
+    HorizontalOptions="Center"
+VerticalOptions="End"
+CornerRadius="30"
+Padding="0, 0"
+Background="#331832" />
+                <Button Grid.Column="1"
+                    Margin="3"
+    HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#D81E5B" />
+                <Button Grid.Column="2"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#F0544F" />
+                <Button Grid.Column="3"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#C6D8D3" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Row="1"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                <Button Grid.Column="0"
+                    Margin="3"
+    HorizontalOptions="Center"
+VerticalOptions="End"
+CornerRadius="30"
+Padding="0, 0"
+Background="#157A6E" />
+                <Button Grid.Column="1"
+                    Margin="3"
+    HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#499F68" />
+                <Button Grid.Column="2"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#77B28C" />
+                <Button Grid.Column="3"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#C2C5BB" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Row="3"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                <Button Grid.Column="0"
+                    Margin="3"
+    HorizontalOptions="Center"
+VerticalOptions="End"
+CornerRadius="30"
+Padding="0, 0"
+Background="#133C55" />
+                <Button Grid.Column="1"
+                    Margin="3"
+    HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#386FA4" />
+                <Button Grid.Column="2"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#59A5D8" />
+                <Button Grid.Column="3"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#84D2F6" />
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Grid.Row="4"
+                   Grid.ColumnSpan="4"
+                   HorizontalOptions="Center"
+                                   VerticalOptions="Center">
+                <Button Grid.Column="0"
+                    Margin="3"
+    HorizontalOptions="Center"
+VerticalOptions="End"
+CornerRadius="30"
+Padding="0, 0"
+Background="#B26700" />
+                <Button Grid.Column="1"
+                    Margin="3"
+    HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#E06D06" />
+                <Button Grid.Column="2"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#FFC53A" />
+                <Button Grid.Column="3"
+                    Margin="3"
+        HorizontalOptions="Center"
+    VerticalOptions="End"
+    CornerRadius="30"
+    Padding="0, 0"
+    Background="#FAFF81" />
+            </HorizontalStackLayout>
+        </Grid>
+    </VerticalStackLayout>
+</mopups:PopupPage>

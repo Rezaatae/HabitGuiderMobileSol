@@ -3,6 +3,7 @@ using HabitGuiderMobileSol.ViewModels;
 using HabitGuiderMobileSol.Views;
 using Microcharts.Maui;
 using Microsoft.Extensions.Logging;
+using Mopups.Hosting;
 using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace HabitGuiderMobileSol
@@ -14,7 +15,7 @@ namespace HabitGuiderMobileSol
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
-                .UseSkiaSharp()
+                .ConfigureMopups()
                 .UseMicrocharts()
                 .ConfigureFonts(fonts =>
                 {
