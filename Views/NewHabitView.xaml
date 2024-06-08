@@ -8,39 +8,55 @@
         <VerticalStackLayout Grid.Row="1">
             <BoxView Color="{DynamicResource Primary}"
                  HeightRequest="1"/>
-            <Grid RowDefinitions="Auto, Auto, Auto, Auto"
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto, Auto"
               ColumnDefinitions="*, Auto"
               Padding="10"
               ColumnSpacing="10"
               RowSpacing="30">
                 <VerticalStackLayout>
+                    <Label Text="Group"/>
+                    <Entry Placeholder="Habit Group"
+                           Margin="0"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="Importance"/>
+                    <Entry Placeholder="/10"
+                           Keyboard="Numeric"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="1">
                     <Label Text="Name"/>
                     <Entry Placeholder="Habit Name"
                        Margin="0"/>
                 </VerticalStackLayout>
-                <VerticalStackLayout Grid.Column="1">
-                    <Label Text="ColorPicker"/>
-                    <Entry Placeholder="ColorPicker"
-                       Keyboard="Numeric"/>
-                </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="1"
+                                     Grid.Column="1">
+                    <Label Text="Colour"
+                           HorizontalOptions="Center"/>
+                    <Button HorizontalOptions="Center"
+                            VerticalOptions="End"
+                            CornerRadius="15"
+                            Padding="0, 0"
+                            Background="#Ff9788">
+                    </Button>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="2"
                                  Grid.ColumnSpan="2">
                     <Label Text="Description"/>
                     <Entry Placeholder="Habit Description"
                        Margin="0"/>
                 </VerticalStackLayout>
-                <VerticalStackLayout Grid.Row="2"
+                <VerticalStackLayout Grid.Row="3"
                                  Grid.ColumnSpan="2">
                     <Label Text="Unit"/>
                     <Entry Placeholder="Habit Unit e.g. minutes, meters, liters..."
                        Margin="0"/>
                 </VerticalStackLayout>
-                <VerticalStackLayout Grid.Row="3">
+                <VerticalStackLayout Grid.Row="4">
                     <Label Text="Target"/>
                     <Entry Placeholder="Target Amount"
                        Margin="0"/>
                 </VerticalStackLayout>
-                <VerticalStackLayout Grid.Row="3"
+                <VerticalStackLayout Grid.Row="4"
                                  Grid.Column="1">
                     <Label Text="Frequency"/>
                     <Picker Title="Freuency">
