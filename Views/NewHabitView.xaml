@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HabitGuiderMobileSol.Views.NewHabitView"
+             Title="Create Habit">
+    <Grid RowDefinitions="Auto, Auto, *"
+      Padding="3">
+        <VerticalStackLayout Grid.Row="1">
+            <BoxView Color="{DynamicResource Primary}"
+                 HeightRequest="1"/>
+            <Grid RowDefinitions="Auto, Auto, Auto, Auto"
+              ColumnDefinitions="*, Auto"
+              Padding="10"
+              ColumnSpacing="10"
+              RowSpacing="30">
+                <VerticalStackLayout>
+                    <Label Text="Name"/>
+                    <Entry Placeholder="Habit Name"
+                       Margin="0"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="1">
+                    <Label Text="ColorPicker"/>
+                    <Entry Placeholder="ColorPicker"
+                       Keyboard="Numeric"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="1"
+                                 Grid.ColumnSpan="2">
+                    <Label Text="Description"/>
+                    <Entry Placeholder="Habit Description"
+                       Margin="0"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="2"
+                                 Grid.ColumnSpan="2">
+                    <Label Text="Unit"/>
+                    <Entry Placeholder="Habit Unit e.g. minutes, meters, liters..."
+                       Margin="0"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="3">
+                    <Label Text="Target"/>
+                    <Entry Placeholder="Target Amount"
+                       Margin="0"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Row="3"
+                                 Grid.Column="1">
+                    <Label Text="Frequency"/>
+                    <Picker Title="Freuency">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Daily</x:String>
+                                <x:String>Weekly</x:String>
+                                <x:String>Monthly</x:String>
+                                <x:String>Yearly</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                </VerticalStackLayout>
+            </Grid>
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="2"
+                         VerticalOptions="Center">
+            <Grid RowDefinitions="Auto"
+              ColumnDefinitions="*, *">
+                <Button Text="Cancel"
+                HorizontalOptions="Center"
+                VerticalOptions="End"
+                CornerRadius="4"
+                Padding="50, 0"
+                BackgroundColor="OrangeRed">
+                </Button>
+                <Button Grid.Column="1"
+                    Text="Save"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    CornerRadius="4"
+                    Padding="50, 0"
+                    BackgroundColor="LightGreen">
+                </Button>
+
+            </Grid>
+        </VerticalStackLayout>
+    </Grid>
+</ContentPage>

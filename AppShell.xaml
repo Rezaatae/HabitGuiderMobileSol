@@ -4,12 +4,22 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:HabitGuiderMobileSol"
+    xmlns:views="clr-namespace:HabitGuiderMobileSol.Views"
     Shell.FlyoutBehavior="Disabled"
     Title="HabitGuiderMobileSol">
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Create New Habit"
+        ContentTemplate="{DataTemplate views:NewHabitView}"
+        Route="NewHabitView" />
+
+    <!--<TabBar x:Name="ShellTabBar">
+        <Tab Title="Home">
+            <ShellContent ContentTemplate="{DataTemplate views:HomeView}" Route="HomeView" />
+        </Tab>
+        <Tab Title="Habits">
+            <ShellContent ContentTemplate="{DataTemplate views:HabitsListView}" Route="HabitsListView" />
+        </Tab>
+    </TabBar>-->
 
 </Shell>

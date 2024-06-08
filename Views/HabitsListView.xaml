@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:HabitGuiderMobileSol.Models"
+             xmlns:vm="clr-namespace:HabitGuiderMobileSol.ViewModels"
+             x:DataType="vm:HabitsListViewModel"
+             x:Class="HabitGuiderMobileSol.Views.HabitsListView"
+             Title="Habits">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{OnPlatform Default='+ Add Habit', iOS='+'}" />
+    </ContentPage.ToolbarItems>
+
+    <Grid RowDefinitions="Auto, *">
+        <VerticalStackLayout Grid.RowSpan="2"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                         IsVisible="{Binding IsBusy}">
+            <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           HorizontalOptions="FillAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           Grid.RowSpan="2"
+                           Grid.ColumnSpan="2"/>
+            <Label Text="{Binding BusyText}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+        </VerticalStackLayout>
+        <Label Grid.Row="0"
+           Text="Habits"
+           FontAttributes="Bold"/>
+        <Grid Grid.Row="1"
+           RowDefinitions="*, Auto">
+            <CollectionView Grid.Row="0"
+                        ItemsSource="{Binding Habits}">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout ItemSpacing="10"
+                                   Orientation="Vertical"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="models:Habit">
+                        <Grid RowDefinitions="Auto, Auto"
+                          ColumnDefinitions="*, Auto"
+                          RowSpacing="5"
+                          Padding="5">
+                            <Label Grid.Row="0"
+                               Grid.Column="0"
+                               Text="{Binding Name}"
+                               TextColor="White"/>
+                            <Label Grid.Row="1"
+                               Grid.Column="0"
+                               Text="{Binding Description}"
+                               TextColor="White"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.EmptyView>
+                    <ContentView>
+                        <VerticalStackLayout HorizontalOptions="Center"
+                                         VerticalOptions="Center">
+                            <Label Text="No Habits Found"
+                               TextColor="White"
+                               FontSize="18"
+                               HorizontalOptions="Center"
+                               FontAttributes="Bold"/>
+                            <Label Text="create a habit using the + button on the toolbar"
+                               TextColor="White"
+                               HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </ContentView>
+                </CollectionView.EmptyView>
+            </CollectionView>
+        </Grid>
+
+
+    </Grid>
+</ContentPage>
