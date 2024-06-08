@@ -1,4 +1,6 @@
+using HabitGuiderMobileSol.Popups;
 using HabitGuiderMobileSol.ViewModels;
+using Mopups.Services;
 
 namespace HabitGuiderMobileSol.Views;
 
@@ -15,6 +17,12 @@ public partial class HabitsListView : ContentPage
     protected async override void OnAppearing()
     {
         base.OnAppearing();
+        Preferences.Clear();
         await _viewModel.LoadHabitsAsync();
+    }
+
+    private void OnHabitTypeConfBtnClicked(object sender, EventArgs e)
+    {
+        MopupService.Instance.PushAsync(new HabitTypeConfPopup());
     }
 }

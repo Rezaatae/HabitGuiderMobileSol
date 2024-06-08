@@ -8,22 +8,22 @@
     Shell.FlyoutBehavior="Disabled"
     Title="HabitGuiderMobileSol">
 
-    <ShellContent
+    <!--<ShellContent
         Title="Create New Habit"
         ContentTemplate="{DataTemplate views:NewHabitView}"
         Route="NewHabitView" />
-    <!--<ShellContent
+    --><!--<ShellContent
     Title="Create New Habit"
     ContentTemplate="{DataTemplate local:MainPage}"
     Route="NewHabitView" />-->
 
-    <!--<TabBar x:Name="ShellTabBar">
+    <TabBar x:Name="ShellTabBar">
         <Tab Title="Home">
             <ShellContent ContentTemplate="{DataTemplate views:HomeView}" Route="HomeView" />
         </Tab>
         <Tab Title="Habits">
             <ShellContent ContentTemplate="{DataTemplate views:HabitsListView}" Route="HabitsListView" />
         </Tab>
-    </TabBar>-->
+    </TabBar>
 
 </Shell>

@@ -33,9 +33,9 @@ namespace HabitGuiderMobileSol
             builder.Services.AddSingleton<HabitsListViewModel>();
             builder.Services.AddSingleton<NewHabitViewModel>();
 
-            builder.Services.AddSingleton<HomeView>();
-            builder.Services.AddSingleton<HabitsListView>();
-            builder.Services.AddSingleton<NewHabitView>();
+            builder.Services.AddTransient<HomeView>();
+            builder.Services.AddTransient<HabitsListView>();
+            builder.Services.AddTransient<NewHabitView>();
 
             return builder.Build();
         }

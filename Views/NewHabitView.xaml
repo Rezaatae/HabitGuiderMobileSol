@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:HabitGuiderMobileSol.Models"
+             xmlns:vm="clr-namespace:HabitGuiderMobileSol.ViewModels"
+             x:DataType="vm:NewHabitViewModel"
              x:Class="HabitGuiderMobileSol.Views.NewHabitView"
              Title="Create Habit">
     <Grid RowDefinitions="Auto, Auto, *"
@@ -38,7 +41,7 @@
                             CornerRadius="0"
                             HeightRequest="30"
                             Padding="0, 0"
-                            Clicked="OnColorPickerClicke">
+                            Clicked="OnColorPickerClicked">
                     </Button>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="2"
@@ -48,7 +51,8 @@
                        Margin="0"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="3"
-                                 Grid.ColumnSpan="2">
+                                 Grid.ColumnSpan="2"
+                                     IsVisible="{Binding IsContinuousHabit}">
                     <Label Text="Unit"/>
                     <Entry Placeholder="Habit Unit e.g. minutes, meters, liters..."
                        Margin="0"/>

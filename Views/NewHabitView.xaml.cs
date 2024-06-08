@@ -14,8 +14,26 @@ public partial class NewHabitView : ContentPage
         _viewModel = vm;
     }
 
-    private void OnColorPickerClicke(object sender, EventArgs e)
+    private void OnColorPickerClicked(object sender, EventArgs e)
     {
         MopupService.Instance.PushAsync(new ColorPickerPopup());
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        if (Preferences.Get("LoadFromMopupPopup", 3)==1)
+        {
+            MopupService.Instance.PopAsync();
+        }
+        if (Preferences.Get("CurrentHabitType", "None") == "Continuous")
+        {
+            _viewModel.IsContinuousHabit = true;
+        }
+        if (Preferences.Get("CurrentHabitType", "None") == "Binary")
+        {
+            _viewModel.IsContinuousHabit = false;
+        }
+        Preferences.Clear();
     }
 }
