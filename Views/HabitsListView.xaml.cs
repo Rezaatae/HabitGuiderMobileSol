@@ -21,7 +21,7 @@ public partial class HabitsListView : ContentPage
         await _viewModel.LoadHabitsAsync();
     }
 
-    private void OnHabitTypeConfBtnClicked(object sender, EventArgs e)
+    private void OnNewHabitBtnClicked(object sender, EventArgs e)
     {
         MopupService.Instance.PushAsync(new HabitTypeConfPopup());
     }

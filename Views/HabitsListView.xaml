@@ -7,7 +7,7 @@
              x:Class="HabitGuiderMobileSol.Views.HabitsListView"
              Title="Habits">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="{OnPlatform Default='+ Add Habit', iOS='+'}" Clicked="OnHabitTypeConfBtnClicked" />
+        <ToolbarItem Text="{OnPlatform Default='+ Add Habit', iOS='+'}" Clicked="OnNewHabitBtnClicked" />
     </ContentPage.ToolbarItems>
 
     <Grid RowDefinitions="Auto, *">

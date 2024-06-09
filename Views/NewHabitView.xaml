@@ -19,17 +19,20 @@
                 <VerticalStackLayout>
                     <Label Text="Group"/>
                     <Entry Placeholder="Habit Group"
-                           Margin="0"/>
+                           Margin="0"
+                           Text="{Binding CurrentHabit.Group}"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Column="1">
                     <Label Text="Importance"/>
                     <Entry Placeholder="/10"
-                           Keyboard="Numeric"/>
+                           Keyboard="Numeric"
+                           Text="{Binding CurrentHabit.Importance}"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="1">
                     <Label Text="Name"/>
                     <Entry Placeholder="Habit Name"
-                       Margin="0"/>
+                       Margin="0"
+                           Text="{Binding CurrentHabit.Name}"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="1"
                                      Grid.Column="1"
@@ -41,31 +44,35 @@
                             CornerRadius="0"
                             HeightRequest="30"
                             Padding="0, 0"
-                            Clicked="OnColorPickerClicked">
+                            Clicked="OnColorPickerClicked"
+                            Text="{Binding CurrentHabit.Color}">
                     </Button>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="2"
                                      Grid.ColumnSpan="2">
                     <Label Text="Description"/>
                     <Entry Placeholder="Habit Description"
-                       Margin="0"/>
+                       Margin="0"
+                           Text="{Binding CurrentHabit.Description}"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="3"
                                  Grid.ColumnSpan="2"
                                      IsVisible="{Binding IsContinuousHabit}">
                     <Label Text="Unit"/>
                     <Entry Placeholder="Habit Unit e.g. minutes, meters, liters..."
-                       Margin="0"/>
+                       Margin="0"
+                           Text="{Binding CurrentHabit.UnitName}"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="4">
                     <Label Text="Target"/>
                     <Entry Placeholder="Target Amount"
-                       Margin="0"/>
+                       Margin="0"
+                           Text="{Binding CurrentHabit.Target}"/>
                 </VerticalStackLayout>
                 <VerticalStackLayout Grid.Row="4"
                                  Grid.Column="1">
                     <Label Text="Frequency"/>
-                    <Picker Title="Frequency">
+                    <Picker SelectedItem="{Binding CurrentHabit.Frequency}">
                         <Picker.ItemsSource>
                             <x:Array Type="{x:Type x:String}">
                                 <x:String>Daily</x:String>
@@ -95,7 +102,8 @@
                     VerticalOptions="End"
                     CornerRadius="4"
                     Padding="50, 0"
-                    BackgroundColor="LightGreen">
+                    BackgroundColor="LightGreen"
+                        Command="{Binding SaveHabitCommand}">
                 </Button>
 
             </Grid>
