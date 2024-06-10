@@ -44,12 +44,14 @@ namespace HabitGuiderMobileSol.ViewModels
             {
                 if(CurrentHabit.Id == 0)
                 {
+                    Console.WriteLine("Reztest create habit");
                     // create
                     await _databaseContext.AddItemAsync<Habit>(CurrentHabit);
                 }
                 else
                 {
                     //update
+                    Console.WriteLine("Reztest create habit");
                     if (await _databaseContext.UpdateItemAsync<Habit>(CurrentHabit))
                     {
                         await Shell.Current.DisplayAlert("Success", "Habit updated successfully", "Ok");
@@ -61,7 +63,9 @@ namespace HabitGuiderMobileSol.ViewModels
                         return;
                     }
                 }
-                setCurrentHabitCommand.Execute(new());
+                Console.WriteLine("Reztest Save Successful");
+                SetCurrentHabitCommand.Execute(new());
+                Console.WriteLine("Reztest CurrentHabit reset");
             }, "Saving habit...");
         }
 

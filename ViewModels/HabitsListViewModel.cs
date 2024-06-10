@@ -31,6 +31,10 @@ namespace HabitGuiderMobileSol.ViewModels
                 if (habits is not null && habits.Any())
                 {
                     Habits ??= new ObservableCollection<Habit>();
+                    if (Habits.Count != 0)
+                    {
+                        Habits.Clear();
+                    }
                     foreach (var habit in habits)
                     {
                         Habits.Add(habit);
