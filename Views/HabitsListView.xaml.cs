@@ -25,4 +25,9 @@ public partial class HabitsListView : ContentPage
     {
         MopupService.Instance.PushAsync(new HabitTypeConfPopup());
     }
+
+    private void OnLogBtnClicked(object sender, EventArgs e)
+    {
+        MopupService.Instance.PushAsync(new CreateHabitLogPopup());
+    }
 }

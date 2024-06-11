@@ -71,6 +71,9 @@
 	  <MauiXaml Update="Popups\ColorPickerPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Popups\CreateHabitLogPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Popups\HabitTypeConfPopup.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
