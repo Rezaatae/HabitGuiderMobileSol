@@ -6,8 +6,24 @@
              Title="CreateHabitLogPopup" BackgroundColor="#80000000" CloseWhenBackgroundIsClicked="True">
     <VerticalStackLayout WidthRequest="300" HeightRequest="250" VerticalOptions="CenterAndExpand" BackgroundColor="Black">
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Create log"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
+        <VerticalStackLayout Grid.Row="0"
+                               Grid.ColumnSpan="4"
+                               HorizontalOptions="Center"
+                               VerticalOptions="Center"
+                           Spacing="5">
+            <Entry Margin="0"/>
+            <CheckBox />
+            <Button Margin="3"
+                    Text="Submit"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    CornerRadius="0"
+                    Padding="0, 0"
+                    BackgroundColor="Grey"
+                    Clicked="SubmitHabitLogBtnClicked"/>
+        </VerticalStackLayout>
     </VerticalStackLayout>
 </mopups:PopupPage>

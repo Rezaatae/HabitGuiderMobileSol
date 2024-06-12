@@ -1,6 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using HabitGuiderMobileSol.Data;
 using HabitGuiderMobileSol.Models;
+using HabitGuiderMobileSol.Popups;
+using Mopups.Services;
 using System.Collections.ObjectModel;
 
 
@@ -41,6 +44,14 @@ namespace HabitGuiderMobileSol.ViewModels
                     }
                 }
             }, "Loading your habits...");
+        }
+
+        [RelayCommand]
+        private void LaunchHabitLogPopup(int id)
+        {
+            Console.WriteLine("reztest logg habit id " + id);
+            Preferences.Set("CurrentHabitId", id);
+            MopupService.Instance.PushAsync(new CreateHabitLogPopup());
         }
 
         private async Task ExecuteAsync(Func<Task> operation, string? busyText = null)

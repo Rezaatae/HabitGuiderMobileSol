@@ -56,7 +56,8 @@
                                     Padding="0"
                                     HeightRequest="25"
                                     FontSize="12"
-                                    Clicked="OnLogBtnClicked"/>
+                                    Command="{Binding Source={RelativeSource AncestorType={x:Type vm:HabitsListViewModel}}, Path= LaunchHabitLogPopupCommand}"
+                                    CommandParameter="{Binding Id}"/>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
