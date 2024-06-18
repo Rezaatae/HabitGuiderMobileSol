@@ -54,6 +54,23 @@ namespace HabitGuiderMobileSol.ViewModels
             MopupService.Instance.PushAsync(new CreateHabitLogPopup());
         }
 
+        [RelayCommand]
+        private async Task DeleteHabitAsync(int id)
+        {
+            await ExecuteAsync(async () =>
+            {
+                if (await _databaseContext.DeleteItemByKeyAsync<Habit>(id))
+                {
+                    var habit = Habits.FirstOrDefault(p => p.Id == id);
+                    Habits.Remove(habit);
+                }
+                else
+                {
+                    await Shell.Current.DisplayAlert("Delete Error", "Habit was not deleted", "Ok");
+                }
+            }, "Deleting habit...");
+        }
+
         private async Task ExecuteAsync(Func<Task> operation, string? busyText = null)
         {
             IsBusy = true;
